@@ -16,7 +16,7 @@ def extract_news_titles():
     
     for header in matches_group_headers:
         received_date = datetime.strptime(header.text.strip(), formatter).date()
-        if received_date == (datetime.now().date() - timedelta(days=1)):
+        if received_date == (datetime.now().date()):
             matches_group_containers = soup.select(".match-results")
             
             for container in matches_group_containers:
