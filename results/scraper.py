@@ -20,7 +20,8 @@ def extract_news_titles():
             matches_group_containers = soup.select(".match-results")
             
             for container in matches_group_containers:
-                for link in container.select("a[href^='/partidas/']"):
-                    href = link['href']
-                    print(href)
+                if received_date == (datetime.now().date()):
+                    for link in container.select("a[href^='/partidas/']"):
+                     href = link['href']
+                     print(href)
 extract_news_titles()
